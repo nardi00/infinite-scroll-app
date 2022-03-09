@@ -10,6 +10,7 @@ const PostCard = styled.div`
 
 const PostAuthor = styled.h4`
   padding: 0.5rem;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const PostImage = styled.img`
@@ -21,8 +22,8 @@ const PostImage = styled.img`
 const Post = ({ post }) => {
   return (
     <PostCard>
-      <PostAuthor>{post.author}</PostAuthor>
       <PostImage src={post.download_url} alt={post.author}></PostImage>
+      <PostAuthor>{post.author}</PostAuthor>
     </PostCard>
   );
 };
