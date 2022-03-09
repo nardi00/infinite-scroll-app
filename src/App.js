@@ -14,12 +14,7 @@ function App() {
   };
 
   const { data, isLoading, isError, hasNextPage, fetchNextPage } =
-    useInfiniteQuery("posts", fetchPosts, {
-      getNextPageParam: (lastPage, pages) => {
-        if (lastPage.nextPage < lastPage.totalPages) return lastPage.nextPage;
-        return undefined;
-      },
-    });
+    useInfiniteQuery("posts", fetchPosts);
 
   return (
     <div className="App">
